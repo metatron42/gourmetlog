@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redefinir Senha</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 0;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input {
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            width: 100%;
+        }
+
+        .password-toggle {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .password-toggle svg {
+            margin-left: 5px;
+            width: 16px;
+            height: 16px;
+            cursor: pointer;
+        }
+
+        .error-message {
+            color: red;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .success-message {
+            color: green;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .submit-button {
+            background-color: #FF0000;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            padding: 10px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .submit-button:hover {
+            background-color: #CC0000;
+        }
+    </style>
+</head>
+<body>
+    <form action="https://650b1f82dfd73d1fab099fbb.mockapi.io/api/v1/usuario" method="post" onsubmit="return validateForm()">
+        <div>
+            <h1>Redefinir Senha</h1>
+            <label>Nova Senha</label>
+            <input type="password" id="senha" name="senha" required>
+            <span class="password-toggle" id="password-toggle" onclick="togglePasswordVisibility('senha', 'password-toggle')">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-eye-slash" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1.646 1.646a.5.5 0 0 1 .708 0l12 12a.5.5 0 0 1-.708.708l-12-12a.5.5 0 0 1 0-.708z"/>
+                    <path fill-rule="evenodd" d="M1.146 7.646a7.5 7.5 0 0 1 10.51 0 .5.5 0 0 0 .708 0 8.5 8.5 0 0 0-11.916 0 .5.5 0 0 0 .708 0z"/>
+                    <path fill-rule="evenodd" d="M8 4a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm-1 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+                </svg>
+            </span>
+        </div>
+        <div>
+            <label>Confirmação de Nova Senha</label>
+            <input type="password" id="confirma_senha" name="confirma_senha" required>
+            <span class="password-toggle" id="confirma-password-toggle" onclick="togglePasswordVisibility('confirma_senha', 'confirma-password-toggle')">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-eye-slash" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1.646 1.646a.5.5 0 0 1 .708 0l12 12a.5.5 0 0 1-.708.708l-12-12a.5.5 0 0 1 0-.708z"/>
+                    <path fill-rule="evenodd" d="M1.146 7.646a7.5 7.5 0 0 1 10.51 0 .5.5 0 0 0 .708 0 8.5 8.5 0 0 0-11.916 0 .5.5 0 0 0 .708 0z"/>
+                    <path fill-rule="evenodd" d="M8 4a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm-1 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+                </svg>
+            </span>
+        </div>
+        <button type="submit" class="submit-button">Confirmar Alteração</button>
+        <div class="error-message" id="error-message"></div>
+        <div class="success-message" id="success-message"></div>
+    </form>
+
+    <script>
+        function togglePasswordVisibility(inputId, toggleId) {
+            const passwordInput = document.getElementById(inputId);
+            const passwordToggle = document.getElementById(toggleId);
+            
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                passwordToggle.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M7.978.293a1 1 0 0 1 .044 1.414l-3.5 3.5a1 1 0 0 1-1.32.083l-.094-.083a1 1 0 0 1-.083-1.32l3.5-3.5a1 1 0 0 1 1.497 0zM8 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8z"/><path fill-rule="evenodd" d="M9.293 7.978a1 1 0 0 1 1.414-.03l4.096 4.096a1 1 0 0 1-1.442 1.4l-4.097-4.097a1 1 0 0 1 .03-1.414z"/><path d="M8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></svg>';
+            } else {
+                passwordInput.type = "password";
+                passwordToggle.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-eye-slash" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 1.646a.5.5 0 0 1 .708 0l12 12a.5.5 0 0 1-.708.708l-12-12a.5.5 0 0 1 0-.708z"/><path fill-rule="evenodd" d="M1.146 7.646a7.5 7.5 0 0 1 10.51 0 .5.5 0 0 0 .708 0 8.5 8.5 0 0 0-11.916 0 .5.5 0 0 0 .708 0z"/><path fill-rule="evenodd" d="M8 4a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm-1 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/></svg>';
+            }
+        }
+
+        function validateForm() {
+            const senhaInput = document.getElementById("senha").value;
+            const confirmaSenhaInput = document.getElementById("confirma_senha").value;
+            const errorMessage = document.getElementById("error-message");
+            const successMessage = document.getElementById("success-message");
+
+            if (senhaInput !== confirmaSenhaInput) {
+                errorMessage.textContent = "Senhas digitadas não conferem.";
+                successMessage.textContent = "";
+                return false;
+            } else {
+                errorMessage.textContent = "";
+                successMessage.textContent = "Senha alterada com sucesso!";
+                return true;
+            }
+        }
+    </script>
+</body>
+</html>
+
