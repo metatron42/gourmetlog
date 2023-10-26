@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tela de Login</title>
+ 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <style>
         body {
@@ -64,24 +67,24 @@
         }
 
         .login-button {
-            background-color: #FF0000;
+            background-color: #FF0000; 
             color: #fff;
             border: none;
             border-radius: 3px;
             padding: 10px;
             cursor: pointer;
             width: 100%;
-            margin-top: 10px;
+            margin-top: 10px; 
         }
 
         .login-button:hover {
-            background-color: #CC0000;
+            background-color: #CC0000; 
         }
 
         .options {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            justify-content: space-between; 
+            align-items: center; 
             margin-top: 20px;
         }
 
@@ -96,7 +99,7 @@
         }
 
         .facebook-button {
-            background-color: #FF0000;
+            background-color: #FF0000; 
             color: #fff;
             border: none;
             border-radius: 3px;
@@ -106,27 +109,25 @@
         }
 
         .facebook-button:hover {
-            background-color: #CC0000;
+            background-color: #CC0000; 
         }
 
         .logo-container {
-            max-width: 100%;
+            max-width: 100%; 
         }
     </style>
 </head>
-
 <body>
-
     <div class="container">
-
         <div class="row">
             <div class="col-md-6 logo-container">
-                <img src="img/logo.png" alt="Logo" class="img-fluid" width="600" height="600">
+
+                <img src="img/logo.jpg" alt="Logo" class="img-fluid">
             </div>
             <div class="col-md-6">
                 <div class="login-container">
                     <h2>Tela de Login</h2>
-                    <form class="login-form">
+                    <form class="login-form" onsubmit="return validateForm()">
                         <div class="form-group">
                             <label for="username">Usuário:</label>
                             <input type="text" id="username" name="username" required>
@@ -135,24 +136,24 @@
                             <label for="password">Senha:</label>
                             <div style="display: flex; align-items: center;">
                                 <input type="password" id="password" name="password" required>
+
                                 <span class="password-toggle" id="password-toggle">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                                        class="bi bi-eye-slash" viewBox="0 0 16 16">
-                                        <path fill-rule="evenodd"
-                                            d="M1.646 1.646a.5.5 0 0 1 .708 0l12 12a.5.5 0 0 1-.708.708l-12-12a.5.5 0 0 1 0-.708z" />
-                                        <path fill-rule="evenodd"
-                                            d="M1.146 7.646a7.5 7.5 0 0 1 10.51 0 .5.5 0 0 0 .708 0 8.5 8.5 0 0 0-11.916 0 .5.5 0 0 0 .708 0z" />
-                                        <path fill-rule="evenodd"
-                                            d="M8 4a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm-1 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-eye-slash" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M1.646 1.646a.5.5 0 0 1 .708 0l12 12a.5.5 0 0 1-.708.708l-12-12a.5.5 0 0 1 0-.708z"/>
+                                        <path fill-rule="evenodd" d="M1.146 7.646a7.5 7.5 0 0 1 10.51 0 .5.5 0 0 0 .708 0 8.5 8.5 0 0 0-11.916 0 .5.5 0 0 0 .708 0z"/>
+                                        <path fill-rule="evenodd" d="M8 4a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm-1 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
                                     </svg>
+
                                 </span>
                             </div>
                         </div>
-                        <button type="submit" class="login-button">Entrar</button>
+                        <button type="submit" class="login-button" id="login-button">Entrar</button>
                     </form>
                     <div class="options">
                         <div class="option">
-                            <a href="formsenha.html">Esqueci minha senha</a>
+
+                            <a href="formularioSenha.html">Esqueci minha senha</a>
                         </div>
                         <div class="option">
                             <a href="fazer_cadastro.html">Fazer cadastro</a>
@@ -177,7 +178,29 @@
                 passwordToggle.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-eye-slash" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 1.646a.5.5 0 0 1 .708 0l12 12a.5.5 0 0 1-.708.708l-12-12a.5.5 0 0 1 0-.708z"/><path fill-rule="evenodd" d="M1.146 7.646a7.5 7.5 0 0 1 10.51 0 .5.5 0 0 0 .708 0 8.5 8.5 0 0 0-11.916 0 .5.5 0 0 0 .708 0z"/><path fill-rule="evenodd" d="M8 4a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm-1 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/></svg>';
             }
         });
+
+        function validateForm() {
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            if (!username || !password) {
+                alert("Por favor, preencha todos os campos.");
+                return false;
+            }
+
+            if (password.length < 8) {
+                alert("A senha deve conter no mínimo 8 caracteres.");
+                return false;
+            }
+
+            if (username.indexOf("@") === -1) {
+                alert("Endereço de e-mail do usuário está incompleto.");
+                return false;
+            }
+
+            return true;
+        }
     </script>
 </body>
-
 </html>
+
