@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GourmetLOG</title>
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md bg-body-tertiary py-3 box-shadow">
+        <div class="container-lg">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/G-Gourmetlog.svg" alt="" width="50" height="50" class="d-inline-block align-flex">
+                GourmetLOG
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-lg-auto">
+                    <li class="nav-item px-1">
+                        <a class="nav-link active" aria-current="page" href="#">Cadastre seu Restaurante</a>
+                    </li>
+                    <li class="nav-item px-1">
+                        <a class="nav-link active" aria-current="page" href="#">Perguntas Frequentes</a>
+                    </li>
+                    <li class="nav-item px-1">
+                        <a class="nav-link active" aria-current="page" href="#">Encontre Reservas</a>
+                    </li>
+                    <li class="nav-item px-3">
+                        <a class="btn btn-outline-danger ml-md-2" aria-current="page" href="#">Login</a>
+                    </li>
+            </div>
+    </nav>
+
+    <div class="container-lg">
+
+        <section class="text-center">
+            <div class="container-lg">
+                <div class="py-5">
+                    <span class="h6 d-block">DÚVIDAS?</span>
+                    <h2 class="display-4 text-danger">Perguntas Frequentes</h2>
+                </div>
+
+                <section class="accordion" id="accordion-faq">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                <p class="h5">O que é GOURMETLOG</p>
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Somos uma startup especializada em movimentar horários e dias específicos, escolhidos
+                                pelos
+                                restaurantes parceiros! Nosso objetivo é proporcionar ótimas experiências gastronômicas,
+                                sem
+                                filas, com a cozinha e o serviço à sua disposição! Para tal, você terá que fazer reserva
+                                em
+                                nosso site www.gourmetlog.com.br,
+                                na qual se comprometerá a chegar na hora estipulada e seguir regras, que garantirão a
+                                você e
+                                seus convidados o direito de comerem, com <strong>50% de desconto.</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                <p class="h5">Como faço uma reserva?</p>
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Abra o aplicativo ou acesse o site o e faça uma reserva mediante o pagamento de uma taxa
+                                no
+                                valor de R$ 15,00,
+                                para reservar uma mesa de 2, 4 ou 6* pessoas(acima de 5 anos) comerem com 50% de
+                                desconto.
+                                *6 pessoas sujeito a disponibilidade do restaurante. <strong>ATENÇÃO: A tolerância para
+                                    atrasos é de 30 minutos,
+                                    para todos os integrantes da mesa, e após este prazo o GOURMETLOG não permite que o
+                                    restaurante conceda o benefício do desconto.</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                <p class="h5">Quais as formas de pagamento da taxa de reserva?</p>
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Cartão de Crédito e PIX
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                <p class="h5">Quando as mesas ficam disponíveis para reservas?</p>
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Nosso calendário sempre disponibiliza mesas para 7 dias corridos. A próxima data no
+                                calendário e, com ela, os horários disponíveis para reservar mesas, abre às 00h00 da
+                                noite.
+                                Exemplo: as segundas feiras às 00h00 as mesas da próxima segunda feira abrem. Exemplo:
+                                as
+                                terças feiras às 00h00 as mesas da próxima terça feira abrem, e assim por diante.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                <p class="h5">Fiz uma reserva e não encontro o comprovante. Como faço?</p>
+                            </button>
+                        </h2>
+                        <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                No Site: Acesse www.gourmetlog.com.br > no canto superior direito > selecione o seu NOME
+                                >
+                                MINHAS RESERVAS > ATUALIZE a página (F5 de um computador, ou puxando a tela para baixo
+                                com o
+                                dedo caso esteja em um celular) Em todas as reservas efetuadas você recebe o comprovante
+                                no
+                                e-mail cadastrado conosco. Basta abrir o e-mail e selecionar “PEGAR CUPOM” Este
+                                comprovante
+                                de reserva deve ser apresentado ao restaurante na sua chegada e pode ser feito do
+                                celular
+                                mesmo, sem a necessidade de impressão.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                <p class="h5">Posso reservar uma mesa para um número de pessoas e ir em mais
+                                    integrantes?</p>
+                            </button>
+                        </h2>
+                        <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Não. O número de pessoas na mesa deve sempre respeitar a quantidade de integrantes para
+                                qual
+                                foi feita a reserva e, caso esta regra seja desrespeitada, o GOURMETLOG não permite que
+                                o
+                                restaurante conceda o desconto. Verifique, na página do restaurante, se este permite
+                                juntar
+                                mesas. Em caso positivo, faça mais de uma reserva para o mesmo dia e horário para
+                                garantir o
+                                benefício a todos os integrantes.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                <p class="h5">Eu consigo editar minha reserva para aumentar ou diminuir o número de
+                                    pessoas na
+                                    mesa?</p>
+                            </button>
+                        </h2>
+                        <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Sim. Entrando na aba 'minhas reservas' e selecionando a reserva escolhida você consegue
+                                alterar o numero de integrantes e a data da reserva.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                                <p class="h5">O que acontece se um dos integrantes da mesa chegar atrasado?</p>
+                            </button>
+                        </h2>
+                        <div id="collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                O desconto de 50% é válido para a data e hora da sua reserva, com uma tolerância máxima
+                                de
+                                30 minutos de atraso para todos os integrantes da mesa.
+
+                                Após essa tolerância, vocês são bem-vindos no restaurante, mas perdem o direito ao
+                                benefício
+                                do desconto.
+
+                                Em casos de atraso, o GOURMETLOG não permite que o restaurante conceda o desconto.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                                <p class="h5">Posso chegar antes do horário da reserva?</p>
+                            </button>
+                        </h2>
+                        <div id="collapseNine" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Não. O restaurante, ao escolher o horário de chegada para as reservas considerou
+                                informações
+                                internas, como número de mesas disponíveis, movimento natural do restaurante, tempo de
+                                espera na cozinha e número de garçons disponíveis naquele horário e, chegar antes do
+                                horário, pode comprometer a logística e organização que garantem a qualidade do
+                                atendimento.
+
+                                Por favor chegue dentro do horário estipulado pelo restaurante.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                                <p class="h5">Se eu fizer uma reserva e for em menos pessoas, eu perco o benefício?</p>
+                            </button>
+                        </h2>
+                        <div id="collapseTen" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Não. Você não perde o desconto se for em menos pessoas do que o reservado.
+
+                                O que JAMAIS pode acontecer é ir em um número MAIOR de pessoas do que o reservado. Neste
+                                caso, o GOURMETLOG não permite que o restaurante conceda o desconto.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
+                                <p class="h5">Como eu faço um cancelamento de reserva?</p>
+                            </button>
+                        </h2>
+                        <div id="collapseEleven" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Pelo Site: Acesse www.gourmetlog.com.br > no canto superior direito > selecione o seu
+                                nome >
+                                Minhas Reservas > escolha a reserva a ser cancelada > Selecionar CANCELAR RESERVA.
+
+                                Pelo e-mail: Procure o e-mail de confirmação de reserva > abra o e-mail > selecione
+                                PEGAR
+                                CUPOM > selecione CANCELAR RESERVA
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwelve" aria-expanded="false" aria-controls="collapseTwelve">
+                                <p class="h5">Quando eu cancelo uma reserva, eu sou reembolsado?</p>
+                            </button>
+                        </h2>
+                        <div id="collapseTwelve" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Quando o cancelamento é feito com, no mínimo, 3 horas de antecedência do dia/horário da
+                                reserva, um e-mail automático é enviado com um código de gratuidade para 1 (uma) nova
+                                reserva.
+
+                                O valor do código de nova reserva será o mesmo da taxa paga anteriormente, pela reserva
+                                cancelada. Se quiser fazer nova reserva de maior valor, você pode utilizá-lo para pagar
+                                apenas a diferença.
+
+                                O código de cancelamento tem 2 meses de validade, contabilizado a partir da data do
+                                cancelamento, e pode ser usado em 1 (uma) nova reserva para qualquer restaurante
+                                participante da sua cidade.
+
+                                Procure o email automático na pasta de SPAM.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThirteen" aria-expanded="false"
+                                aria-controls="collapseThirteen">
+                                <p class="h5">A taxa de reserva é deduzida da minha conta?</p>
+                            </button>
+                        </h2>
+                        <div id="collapseThirteen" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Não. A taxa de reserva é paga diretamente para o GOURMETLOG e não é deduzida do valor da
+                                conta.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseFourteen" aria-expanded="false"
+                                aria-controls="collapseFourteen">
+                                <p class="h5">Posso fazer reservas para quantos integrantes por vez?</p>
+                            </button>
+                        </h2>
+                        <div id="collapseFourteen" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Na página dos restaurantes você encontra o número de integrantes permitidos por mesa.
+
+                                O limite máximo de integrantes pode ser 4 ou 6, e a escolha deste limite fica ao
+                                critério
+                                dos próprios restaurantes.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseFifteen" aria-expanded="false" aria-controls="collapseFifteen">
+                                <p class="h5">Qual a política para crianças?</p>
+                            </button>
+                        </h2>
+                        <div id="collapseFifteen" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Crianças de até 4 anos não são consideradas integrantes da mesa e devem ser
+                                desconsiderados
+                                ao efetuar a reserva.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseSixteen" aria-expanded="false" aria-controls="collapseSixteen">
+                                <p class="h5">Rodízio entra no desconto?</p>
+                            </button>
+                        </h2>
+                        <div id="collapseSixteen" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Esta decisão cabe ao restaurante e, normalmente, está discriminada na descrição dentro
+                                do perfil
+                                do restaurante no APP, Site e no cupom
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseSeventeen" aria-expanded="false"
+                                aria-controls="collapseSeventeen">
+                                <p class="h5">O restaurante pode impor alguma regra adicional?</p>
+                            </button>
+                        </h2>
+                        <div id="collapseSeventeen" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Com exceção das regras acima listadas, o restaurante tem a liberdade de:
+
+                                Escolher o local onde o GOURMETLOG sentarão dentro do salão
+                                Controlar se pode ou não juntar mesas,
+                                Cobrança de couvert, cobrança de rolha,
+                                Cobrança de “vallet parking”, cobrança de uma taxa de uso do espaço kids
+                                Cobrança de desperdício, formas de pagamento, entre outras.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseEighteen" aria-expanded="false"
+                                aria-controls="collapseEighteen">
+                                <p class="h5">Posso fazer confraternizações usando o GOURMETLOG?</p>
+                            </button>
+                        </h2>
+                        <div id="collapseEighteen" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Não. O Objetivo do GOURMETLOG é proporcionar experiências gastronômicas mais econômicas
+                                para os
+                                usuários, porém, o seu uso também deve considerar o respeito a oportunidade de todos
+                                reservarem
+                                mesas e do restaurante de poder incrementar sua base de clientes.
+
+                                Confraternizações tendem a girar menos as mesas ocupando o salão de forma
+                                desproporcional ao
+                                objetivo do GOURMETLOG junto ao restaurante parceiro.
+
+                                Se você quer ter sempre os melhores restaurantes de sua cidade no APP, fique atento a
+                                esta
+                                regra!
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseNineteen" aria-expanded="false"
+                                aria-controls="collapseNineteen">
+                                <p class="h5">Existe um gasto mínimo?</p>
+                            </button>
+                        </h2>
+                        <div id="collapseNineteen" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Não, você pode gastar o quanto achar necessário.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwenty" aria-expanded="false" aria-controls="collapseTwenty">
+                                <p class="h5">Existe um tempo mínimo ou máximo para permanecer no restaurante?</p>
+                            </button>
+                        </h2>
+                        <div id="collapseTwenty" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Não, você poderá ficar o tempo que quiser e em todo o tempo o desconto de 50% é válido
+                                para as
+                                refeições. Só não pode chegar atrasado.
+
+                                Certifique-se do horário reservado, todos da mesa têm tolerância de 30 minutos para
+                                chegar.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwentyOne" aria-expanded="false"
+                                aria-controls="collapseTwentyOne">
+                                <p class="h5">Posso pedir para levar para casa a comida que sobrou?</p>
+                            </button>
+                        </h2>
+                        <div id="collapseTwentyOne" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Não, o benefício do desconto é válido para consumo local, no restaurante junto com as
+                                bebidas e
+                                demais opções do cardápio.
+
+                                Atente-se ao desperdício!
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwentyTwo" aria-expanded="false"
+                                aria-controls="collapseTwentyTwo">
+                                <p class="h5">Reservei o restaurante, mas quando cheguei lá estava fechado. O que eu
+                                    faço?</p>
+                            </button>
+                        </h2>
+                        <div id="collapseTwentyTwo" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Por favor, entre em contato pela opção Fale Conosco no aplicativo ou site que este
+                                problema será
+                                resolvido.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwentyTree" aria-expanded="false"
+                                aria-controls="collapseTwentyTree">
+                                <p class="h5">Como faço para redefinir minha senha?</p>
+                            </button>
+                        </h2>
+                        <div id="collapseTwentyTree" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Acesse o site www.gourmetlog.com.br , selecione a região e ao invés de colocar o e-mail
+                                de login
+                                e senha, selecione ESQUECI MINHA SENHA.
+
+                                Informe o seu e-mail cadastrado conosco e selecione RESETAR SUA SENHA. Um e-mail com o
+                                link para
+                                redefinição de senha será enviado. Faça a troca de senha pelo SITE e depois de alterada,
+                                acesse
+                                o APP
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwentyFour" aria-expanded="false"
+                                aria-controls="collapseTwentyFour">
+                                <p class="h5">Porque a minha avaliação foi apagada?</p>
+                            </button>
+                        </h2>
+                        <div id="collapseTwentyFour" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                O Primeira Mesa se reserva o direito de apagar avaliações quando comprovamos, por meio
+                                de
+                                relatos, fotos, videos ou provas retiradas do nosso sistema, o não cumprimento de uma ou
+                                mais
+                                regras. Neste caso, você será informado sobre a exclusão da avaliação e terá a
+                                oportunidade de
+                                tirar todas as suas duvidas sobre nossas regras para garantir que o evento não se
+                                repita.
+                                Exemplos de avaliações que serão apagadas: 1. Ir em um numero maior de pessoas do que o
+                                reservado; 2. Ir em um numero maior de integrantes do que o permitido pelo restaurante;
+                                3. Não
+                                comparecer a reserva e avaliar mal o restaurante; 4. Juntar mesas em restaurantes que
+                                não
+                                permitem.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwentyFive" aria-expanded="false"
+                                aria-controls="collapseTwentyFive">
+                                <p class="h5">Como sei que minha reserva foi confirmada?</p>
+                            </button>
+                        </h2>
+                        <div id="collapseTwentyFive" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Se a sua reserva for confirmada, automaticamente será gerado um cupom com um código. O
+                                cupom
+                                será enviado em seu e-mail e aparecerá no seu app/site. Lembre-se: Sua reserva só sera
+                                confirmada após o código ser gerado. Não esqueça de confirmar o cupom antes de sair de
+                                casa.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwentySix" aria-expanded="false"
+                                aria-controls="collapseTwentySix">
+                                <p class="h5">Posso sofrer algum tipo de bloqueio?</p>
+                            </button>
+                        </h2>
+                        <div id="collapseTwentySix" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                SIM, você pode ser bloqueado se: - Descumprir as regras gerais do App e/ou específicas
+                                do
+                                restaurante. -Se ocorrer abuso ou excesso que prejudique o estabelecimento.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwentySeven" aria-expanded="false"
+                                aria-controls="collapseTwentySeven">
+                                <p class="h5">Posso levar bebidas para consumir no estabelecimento?</p>
+                            </button>
+                        </h2>
+                        <div id="collapseTwentySeven" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Não é permitido levar bebidas ao restaurante.
+                            </div>
+                        </div>
+                    </div>
+
+                    <section>
+            </div>
+
+
+            <script type="text/javascript" src="js/bootstrap.js"></script>
+            <script type="text/javascript" src="js/script.js"></script>
+</body>
+
+</html>

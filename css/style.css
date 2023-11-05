@@ -1,0 +1,50 @@
+body {
+    
+}
+
+.box-shadow {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .05),
+                0 4px 8px rgba(0, 0, 0, .05);
+}
+
+@media (max-width: 767px) {
+    #headline-index {
+      height: 90px;
+    }
+  }
+
+  .accordion-header button.collapsed {
+    background-color: whitesmoke; /* Change this to your desired light red color */
+    color: black; /* Text color for the collapsed button */
+  }
+
+  .accordion-header button:not(.collapsed) {
+    background-color: lightcoral; /* Change this to your desired light red color */
+    color: black; /* Text color for the collapsed button */
+  }
+
+
+/*footer*/
+
+
+.list-unstyled {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+
+.list-unstyled li {
+    margin: 0 20px;
+  }
+
+
+.list-unstyled li a {
+    text-decoration: none; /* Remove underline from links */
+    color: #007bff; /* Set color for the links */
+  }
+
+.list-unstyled li a:hover {
+    text-decoration: underline; /* Add underline on hover for links */
+  }
+
+  

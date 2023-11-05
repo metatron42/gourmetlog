@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Cadastro</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+
+        .alert-cadastro {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="container mt-5">
+            <img src="logo.jpg" alt="Logotipo da Página" class="img-fluid mx-auto d-block mb-4" width="200">
+        </div>
+        <h2>Cadastro</h2>
+        <form id="formulario">
+            <div class="mb-3">
+                <label for="nome" class="form-label">Nome</label>
+                <input type="text" class="form-control" id="nome" placeholder="Digite seu nome" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="cpf" class="form-label">CPF</label>
+                <input type="text" class="form-control" id="cpf" placeholder="Digite seu CPF" required>
+                <div id="cpf-counter" class="text-muted">0/11</div>
+                <div id="cpf-error" class="text-danger"></div> 
+            </div>
+
+            <div class="mb-3">
+                <label for="dataNascimento" class="form-label">Data de Nascimento</label>
+                <input type="date" class="form-control" id="dataNascimento" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="email" class="form-label">E-mail</label>
+                <input type="email" class="form-control" id="email" placeholder="Digite seu E-mail" required>
+            </div>
+            <div class="mb-3">
+                <label for="confirmarEmail" class="form-label">Confirme seu E-mail</label>
+                <input type="email" class="form-control" id="confirmarEmail" placeholder="Confirme seu E-mail" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="senha" class="form-label">Senha</label>
+                <input type="password" class="form-control" id="senha" placeholder="Digite sua senha (mínimo de 8 caracteres)" required>
+            </div>
+            <div class="mb-3">
+                <label for="confirmarSenha" class="form-label">Confirme a Senha</label>
+                <input type="password" class="form-control" id="confirmarSenha" placeholder="Confirme sua senha" required>
+                <small id="senhaHelp" class="form-text text-muted">A senha deve conter no mínimo 8 caracteres.</small>
+            </div>
+            <button type="submit" class="btn btn-primary">Cadastrar</button>
+        </form>
+
+        <div class="alert alert-success alert-cadastro" role="alert">
+            Cadastro concluído!
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+        document.getElementById('formulario').addEventListener('submit', function (e) {
+            e.preventDefault();
+            if (validarFormulario()) {
+                exibirMensagemCadastroConcluido();
+            }
+        });
+
+        document.getElementById('cpf').addEventListener('input', function () {
+            const cpfInput = this;
+            const cpfCounter = document.getElementById('cpf-counter');
+            const cpfError = document.getElementById('cpf-error');
+            const cpfValue = cpfInput.value;
+            const cpfLength = cpfValue.length;
+
+            const cpfRegex = /^\d{11}$/; 
+
+            if (cpfRegex.test(cpfValue)) {
+                cpfCounter.textContent = cpfLength + '/11';
+                cpfError.textContent = ''; 
+            } else {
+                cpfCounter.textContent = cpfLength + '/11';
+                cpfError.textContent = 'CPF inválido! Digite novamente.';
+            }
+        });
+
+        document.getElementById('confirmarEmail').addEventListener('input', function () {
+            const emailInput = document.getElementById('email');
+            const confirmarEmailInput = this;
+            const emailError = document.getElementById('email-error');
+            const emailValue = emailInput.value;
+            const confirmarEmailValue = confirmarEmailInput.value;
+
+            if (emailValue !== confirmarEmailValue) {
+            emailError.textContent = 'Os emails não coincidem.';
+            } else {
+            emailError.textContent = '';
+            }
+        });
+
+        function validarFormulario() {
+            const nome = document.getElementById('nome').value;
+            const cpf = document.getElementById('cpf').value;
+            const dataNascimento = document.getElementById('dataNascimento').value;
+            const email = document.getElementById('email').value;
+            const senha = document.getElementById('senha').value;
+            const confirmarSenha = document.getElementById('confirmarSenha').value;
+
+            if (!nome || !cpf || !dataNascimento || !email || !senha || !confirmarSenha) {
+                alert('Todos os campos são obrigatórios.');
+                return false;
+            }
+
+            if (senha.length < 8) {
+                alert('A senha deve conter no mínimo 8 caracteres.');
+                return false;
+            }
+
+            if (senha !== confirmarSenha) {
+                alert('As senhas não coincidem.');
+                return false;
+            }
+
+            if (email !== confirmarEmail) {
+            alert('Os emails não coincidem.');
+            return false;
+        }
+
+            return true;
+        }
+
+        function exibirMensagemCadastroConcluido() {
+            const alertCadastro = document.querySelector('.alert-cadastro');
+            alertCadastro.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
