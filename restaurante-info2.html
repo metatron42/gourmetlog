@@ -1,0 +1,167 @@
+'<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GourmetLOG</title>
+
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-md bg-body-tertiary py-3 box-shadow">
+    <div class="container-lg">
+      <a class="navbar-brand" href="#">
+        <img src="img/G-Gourmetlog.svg" alt="" width="50" height="50" class="d-inline-block align-flex">
+        GourmetLOG
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-md-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Cadastre seu Restaurante</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="faq.html">Perguntas Frequentes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Encontre Reservas</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-outline-danger ml-md-2" aria-current="page" href="#">Login</a>
+          </li>
+      </div>
+  </nav>
+
+
+  <section class="container py-5">
+    <div class="row">
+
+      <div class="col-md-5 py-5 text-center">
+        <p>Bem-vindo ao Restaurante Delícias Gourmet, onde a culinária encontra a sofisticação em um ambiente acolhedor
+          e elegante. Localizado no coração da cidade, somos o destino perfeito para os amantes da gastronomia que
+          buscam uma experiência única.</p>
+      </div>
+
+      <div class="col-md-5">
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="https://a.cdn-hotels.com/gdcs/production156/d1067/98b5cb4d-ea36-43fd-b3ca-21ae04c7c770.jpg"
+                class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img
+                src="https://www.wzhoteljardins.com.br/wp-content/uploads/2020/10/WZ-Hotel-Jardins-955-Lounge-e-Restaurante-19.jpg"
+                class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img
+                src="https://www.wzhoteljardins.com.br/wp-content/uploads/2020/10/WZ-Hotel-Jardins-955-Lounge-e-Restaurante-19.jpg"
+                class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+
+  </section>
+
+
+  <div class="container-lg">    
+    <div class="row mt-6">
+      <div class="col-md-6" id="card"> <!-- cardapio-->
+        <h1>Cardapio</h1>
+        <strong>
+          <p>Entradas:</p>
+        </strong>
+        <ul>
+          <li>Sopa do Dia - R$12,00</li>
+          <li>Salada Caesar - R$15,00</li>
+          <li>Bruschetta de Tomate e Manjericão - R$18,00</li>
+        </ul>
+
+        <strong>
+          <p>Pratos Principais:</p>
+        </strong>
+        <ul>
+          <li>Spaghetti à Carbonara - R$25,00</li>
+          <li>Filé Mignon Grelhado com Molho de Vinho Tinto - R$32,00</li>
+          <li>Risoto de Cogumelos - R$28,00</li>
+          <li>Salmão ao Molho de Limão - R$30,00</li>
+        </ul>
+
+        <strong>
+          <p>Sobremesas:</p>
+        </strong>
+        <ul>
+          <li>Cheesecake de Morango - R$10,00</li>
+          <li>Mousse de Chocolate - R$8,00</li>
+          <li>Sorvete de Baunilha com Calda de Caramelo - R$9,00</li>
+        </ul>
+
+        <strong>
+          <p>Bebidas:</p>
+        </strong>
+        <ul>
+          <li>Vinho Tinto (Taça) - R$15,00</li>
+          <li>Refrigerantes Variados - R$5,00</li>
+          <li>Água Mineral - R$3,00</li>
+        </ul>
+      </div>
+      <div class="col-md-6"> <!-- selecionar mesas-->
+        <h1 class="display-5 text-danger">Reserva</h1>
+        <form>
+          <label for="name" class="form-label">Nome:</label>
+          <input type="text" id="name" name="name" class="form-control" required>
+
+            <div class="row">
+              <div class="col">
+                <label for="date" class="form-label">Data:</label>
+                <input type="date" id="date" name="date" class="form-control" required>
+              </div>
+              
+              <div class="col">
+                <label for="time" class="form-label">Horário:</label>
+                <input type="time" id="time" name="time" class="form-control" required>
+              </div>
+            </div>
+          
+          <label for="guests" class="form-label">Número de Convidados:</label>
+          <input type="number" id="guests" name="guests" class="form-control" required>
+
+          <label for="comments" class="form-label">Comentários adicionais:</label>
+          <textarea id="comments" name="comments" rows="4" class="form-control" ></textarea>
+
+          
+          <button type="submit" class="btn btn-danger btn-lg">Agendar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+
+</body>
+
+</html>
