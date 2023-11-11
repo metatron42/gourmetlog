@@ -5,33 +5,46 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>GOURMETLOG</title>
-    <link rel="stylesheet" href="bootstrap.css">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <script type="text/javascript" src="bootstrap.js"></script>
 
-
-    <div class="container-fluid">
-        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-            <a href="/"
-                class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-                <svg src="img/logo.png" alt="Logo" class="img-fluid" width="50" height="50"></svg>
-                <span class="fs-4">GOURMETLOG</span>
+    <!-- Header-->
+    <nav class="navbar navbar-expand-md bg-body-tertiary py-3 box-shadow text-center">
+        <div class="container-lg">
+            <a class="navbar-brand" href="#">
+                <img src="img/G-Gourmetlog.svg" alt="" width="50" height="50" class="d-inline-block align-flex">
+                GourmetLOG
             </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-lg-auto">
+                    <li class="nav-item px-1">
+                        <a class="nav-link " aria-current="page" href="restaurante-cadastro.html">Cadastre seu
+                            Restaurante</a>
+                    </li>
+                    <li class="nav-item px-1">
+                        <a class="nav-link " aria-current="page" href="faq.html">Perguntas Frequentes</a>
+                    </li>
+                    <li class="nav-item px-1">
+                        <a class="nav-link active" aria-current="page" href="feed.html">Faça Reservas</a>
+                    </li>
+                    <li class="nav-item px-3">
+                        <a class="btn btn-outline-danger ml-md-2" aria-current="page" href="login.html">Login</a>
+                    </li>
+            </div>
+    </nav>
+    <!-- Fim Header-->
 
-            <ul class="nav nav-pills">
-                <li class="nav-item"><a href="index.html" class="nav-link active" aria-current="page">Inicio</a></li>
-                <li class="nav-item"><a href="faq.html" class="nav-link">FAQs</a></li>
-                <li class="nav-item"><a href="login.html" class="nav-link">Entrar</a></li>
-                <li class="nav-item"><a href="cadastrocliente.html" class="nav-link">Cadastre-se</a></li>
-                <li class="nav-item"><a href="cadastroempresa.html" class="nav-link">Empresa</a></li>
-            </ul>
-        </header>
-    </div>
 
-
-    <div class="container main">
+    <div class="container py-5">
 
         <div class="row">
             <div class="col-md-3 filters">
@@ -40,7 +53,7 @@
                         <div class="title">Buscar</div>
                         <div class="options">
                             <form class="search" method="GET"
-                                action="https://www.primeiramesa.com.br/regiao/SP/adquirir-uma-licena">
+                                action="">
                                 <input id="term" name="busca" type="text" class="form-control"
                                     placeholder="Cidade, nome do restaurante, bairro, tipo de comida..." value=""
                                     autocomplete="off">
@@ -49,10 +62,10 @@
                     </div>
                     <aside id="restaurant-filters">
                         <div>
-                            <div class="header  visible-xs visible-sm">Filtrar Resultados </div>
+                            <div class="header  visible-xs visible-sm py-3">Filtrar Resultados </div>
                             <div class="area closed">
                                 <div class="box">
-                                    <div class="title"><img src="/assets/images/clock.svg" alt="Período"> Período</div>
+                                    <div class="title"><img src="icons/clock.svg" alt="Período"> Período</div>
                                     <div class="options">
                                         <div>
                                             <div id="hour_slider"
@@ -71,7 +84,7 @@
                                     </div>
                                 </div>
                                 <div class="box">
-                                    <div class="title"><img src="/assets/images/calendar.svg" alt="Disponibilidade">
+                                    <div class="title py-3"><img src="icons/calendar.svg" alt="Disponibilidade">
                                         Disponibilidade</div>
                                     <div class="options">
                                         <div><input id="available_today" name="available_today" type="checkbox"
@@ -83,7 +96,7 @@
                                     </div>
                                 </div>
                                 <div class="box">
-                                    <div class="title"><img src="/assets/images/services.svg" alt="Serviços"> Serviços
+                                    <div class="title py-3"><img src="icons/cup-hot.svg" alt="Serviços"> Serviços
                                     </div>
                                     <div class="options">
                                         <div><input id="service_wifi" name="wifi" type="checkbox" value="on"><label
@@ -114,7 +127,7 @@
                                     </div>
                                 </div>
                                 <div class="box">
-                                    <div class="title"><img src="/assets/images/cutlery.svg" alt="Cozinha"> Cozinha
+                                    <div class="title py-3"><img src="icons/globe-americas.svg" alt="Cozinha"> Cozinha
                                     </div>
                                     <div class="options">
                                         <div><input id="food_type_0" name="{{filters.food_type}}" type="checkbox"
@@ -134,18 +147,45 @@
             <div id="restaurant-list" class="list col-md-9">
                 <div class="row">
                     <div class="row">
-                        <div class="col-md-3">IMAGEM</div>
+                        <div class="col-md-3">
+                            <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="https://a.cdn-hotels.com/gdcs/production156/d1067/98b5cb4d-ea36-43fd-b3ca-21ae04c7c770.jpg"
+                                            class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://www.wzhoteljardins.com.br/wp-content/uploads/2020/10/WZ-Hotel-Jardins-955-Lounge-e-Restaurante-19.jpg"
+                                            class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://www.wzhoteljardins.com.br/wp-content/uploads/2020/10/WZ-Hotel-Jardins-955-Lounge-e-Restaurante-19.jpg"
+                                            class="d-block w-100" alt="...">
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button"
+                                    data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button"
+                                    data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                        </div>
 
                         <div class="col-md-9">
                             <div class="title">
                                 <a>RESTAURANTE</a>
                             </div>
 
-                            <div class="info row">
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi libero recusandae
-                                tempora nobis ducimus officia assumenda dignissimos praesentium, ad explicabo omnis
-                                perferendis laborum, incidunt, error at perspiciatis? Blanditiis, repellendus aliquam?
-                            </div>
+                            <p>Bem-vindo ao Restaurante Delícias Gourmet, onde a culinária encontra a sofisticação em um
+                                ambiente acolhedor
+                                e elegante. Localizado no coração da cidade, somos o destino perfeito para os amantes da
+                                gastronomia que
+                                buscam uma experiência única.</p>
                         </div>
 
                     </div>
@@ -192,6 +232,36 @@
 
     </div>
 
+
+
+    <!--Footer-->
+
+    <footer class="bg-dark text-white">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col justify-content-center">
+                    <ul class="list-unstyled">
+                        <li>
+                            <a class="nav-link active" href="contato.html">Fale Conosco</a>
+                        </li>
+                        <li>
+                            <a class="nav-link active" href="faq.html">Políticas de Privacidade e Termos de Uso</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!--Fim Footer-->
+
+    <!--Script-->
+
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
 </body>
 
 </html>
