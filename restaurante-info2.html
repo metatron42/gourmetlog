@@ -2,59 +2,52 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>GOURMETLOG</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GOURMETLOG</title>
 
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-    <!-- Header-->
-    <nav class="navbar navbar-expand-md bg-body-tertiary py-3 box-shadow text-center">
-        <div class="container-lg">
-            <a class="navbar-brand" href="#">
-                <img src="img/G-Gourmetlog.svg" alt="" width="50" height="50" class="d-inline-block align-flex">
-                GourmetLOG
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-lg-auto">
-                    <li class="nav-item px-1">
-                        <a class="nav-link " aria-current="page" href="restaurante-cadastro.html">Cadastre seu
-                            Restaurante</a>
-                    </li>
-                    <li class="nav-item px-1">
-                        <a class="nav-link " aria-current="page" href="faq.html">Perguntas Frequentes</a>
-                    </li>
-                    <li class="nav-item px-1">
-                        <a class="nav-link active" aria-current="page" href="feed.html">Faça Reservas</a>
-                    </li>
-                    <li class="nav-item px-3">
-                        <a class="btn btn-outline-danger ml-md-2" aria-current="page" href="login.html">Login</a>
-                    </li>
-            </div>
-    </nav>
-    <!-- Fim Header-->
-
-
-
-  <section class="container py-5">
-    <div class="row">
-
-      <div class="col-md-5 py-5 text-center">
-        <p>Bem-vindo ao Restaurante Delícias Gourmet, onde a culinária encontra a sofisticação em um ambiente acolhedor
-          e elegante. Localizado no coração da cidade, somos o destino perfeito para os amantes da gastronomia que
-          buscam uma experiência única.</p>
+  <!-- Header-->
+  <nav class="navbar navbar-expand-md bg-body-tertiary py-3 box-shadow text-center">
+    <div class="container-lg">
+      <a class="navbar-brand" href="index.html">
+        <img src="img/G-Gourmetlog.svg" alt="" width="50" height="50" class="d-inline-block align-flex">
+        GourmetLOG
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-lg-auto">
+          <li class="nav-item px-1">
+            <a class="nav-link " aria-current="page" href="restaurante-cadastro.html">Cadastre seu
+              Restaurante</a>
+          </li>
+          <li class="nav-item px-1">
+            <a class="nav-link " aria-current="page" href="faq.html">Perguntas Frequentes</a>
+          </li>
+          <li class="nav-item px-1">
+            <a class="nav-link active" aria-current="page" href="feed.html">Faça Reservas</a>
+          </li>
+          <li class="nav-item px-3">
+            <a class="btn btn-outline-danger ml-md-2" aria-current="page" href="login.html">Login</a>
+          </li>
       </div>
+  </nav>
+  <!-- Fim Header-->
 
-      <div class="col-md-5">
+
+
+  <section class="container">
+
+    <div class="row m-3">
+      <div class="col-md-6 pt-5 mx-auto">
         <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active">
@@ -85,16 +78,25 @@
         </div>
       </div>
 
-    </div>
 
+    </div>
+    <div class="col-md-8 mx-auto py-3">
+      <div class="row-sm text-center">
+        <p>Bem-vindo ao Restaurante Delícias Gourmet, onde a culinária encontra a sofisticação em um ambiente acolhedor
+          e elegante. Localizado no coração da cidade, somos o destino perfeito para os amantes da gastronomia que
+          buscam uma experiência única.</p>
+      </div>
+    </div>
 
   </section>
 
 
-  <div class="container-lg">    
-    <div class="row mt-6">
-      <div class="col-md-6" id="card"> <!-- cardapio-->
-        <h1>Cardapio</h1>
+  <div class="container px-5">
+
+    <div class="row mt">
+      <div class="col-sm-1"></div>
+      <div class="col-sm" id="card"> <!-- cardapio-->
+        <h3>Cardapio</h3>
         <strong>
           <p>Entradas:</p>
         </strong>
@@ -132,58 +134,59 @@
           <li>Água Mineral - R$3,00</li>
         </ul>
       </div>
-      <div class="col-md-6"> <!-- selecionar mesas-->
-        <h1 class="display-5 text-danger">Reserva</h1>
+
+      <div class="col-md "> <!-- selecionar mesas-->
+        <h1 class="display-6 text-danger">Reserva</h1>
         <form>
           <label for="name" class="form-label">Nome:</label>
           <input type="text" id="name" name="name" class="form-control" required>
 
-            <div class="row">
-              <div class="col">
-                <label for="date" class="form-label">Data:</label>
-                <input type="date" id="date" name="date" class="form-control" required>
-              </div>
-              
-              <div class="col">
-                <label for="time" class="form-label">Horário:</label>
-                <input type="time" id="time" name="time" class="form-control" required>
-              </div>
+          <div class="row">
+            <div class="col">
+              <label for="date" class="form-label">Data:</label>
+              <input type="date" id="date" name="date" class="form-control" required>
             </div>
-          
+
+            <div class="col">
+              <label for="time" class="form-label">Horário:</label>
+              <input type="time" id="time" name="time" class="form-control" required>
+            </div>
+          </div>
+
           <label for="guests" class="form-label">Número de Convidados:</label>
           <input type="number" id="guests" name="guests" class="form-control" required>
 
           <label for="comments" class="form-label">Comentários adicionais:</label>
-          <textarea id="comments" name="comments" rows="4" class="form-control" ></textarea>
+          <textarea id="comments" name="comments" rows="4" class="form-control"></textarea>
 
-          
-          <button type="submit" class="btn btn-danger btn-lg">Agendar</button>
+          <div class="d-grid gap-2 col-6 mx-auto py-3">
+            <button type="submit" class="btn btn-danger btn-lg">Agendar</button>
+          </div>
         </form>
+
       </div>
+      <div class="col-sm-1"></div>
     </div>
   </div>
-    <!--Footer-->
+  <!--Footer-->
 
-    <footer class="bg-dark text-white">
-      <div class="container py-5">
-          <div class="row">
-              <div class="col justify-content-center">
-                  <ul class="list-unstyled">
-                      <li>
-                          <a class="nav-link active" href="contato.html">Fale Conosco</a>
-                      </li>
-                      <li>
-                          <a class="nav-link active" href="restaurante-cadastro.html">Cadastre seu Restaurante</a>
-                      </li>
-                      <li>
-                          <a class="nav-link active" href="faq.html">Políticas de Privacidade e Termos de Uso</a>
-                      </li>
+  <footer class="bg-dark text-white">
+    <div class="container py-5">
+      <div class="row">
+        <div class="col justify-content-center">
+          <ul class="list-unstyled">
+            <li>
+              <a class="nav-link active" href="contato.html">Fale Conosco</a>
+            </li>
+            <li>
+              <a class="nav-link active" href="faq.html">Políticas de Privacidade e Termos de Uso</a>
+            </li>
 
-                  </ul>
-              </div>
-          </div>
-
+          </ul>
+        </div>
       </div>
+
+    </div>
 
   </footer>
 
