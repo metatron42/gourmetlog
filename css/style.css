@@ -48,3 +48,8 @@ body {
   }
 
   
+  .btn-custom {
+    background-color: rgb(231, 82, 82);
+    color: white;
+    /* Outros estilos personalizados, se necessário */
+}

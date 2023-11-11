@@ -1,124 +1,163 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bootstrap demo</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Perfil do Usuário</title>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-  <div class="container-fluid">
-    <div class="row mt-3">
-      <div class="col-md-3">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-            aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav">
-              <li class="nav-item active">
-                <a class="nav-link" href="#">Página Inicial</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Sobre Nós</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Serviços</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Contato</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </div>
-      <div class="col-md-6">
-        <h1>logo ------ GourmetLog ---------</h1>
-      </div>
-    </div>
-
-    <div class="row mt-3">
-      <div class="col-md-3">
-        <img src="foto.png" alt="foto do restaurante">
-      </div>
-      <div class="col-md-8">
-        <p>Bem-vindo ao Restaurante Delícias Gourmet, onde a culinária encontra a sofisticação em um ambiente acolhedor
-          e elegante. Localizado no coração da cidade, somos o destino perfeito para os amantes da gastronomia que
-          buscam uma experiência única.</p>
-      </div>
-    </div>
-
-    <div class="row mt-3">
-      <div class="col-md-3">
-        <p>Cardapio</p>
-        <strong>
-          <p>Entradas:</p>
-        </strong>
-        <ul>
-          <li>Sopa do Dia - R$12,00</li>
-          <li>Salada Caesar - R$15,00</li>
-          <li>Bruschetta de Tomate e Manjericão - R$18,00</li>
-        </ul>
-
-        <strong>
-          <p>Pratos Principais:</p>
-        </strong>
-        <ul>
-          <li>Spaghetti à Carbonara - R$25,00</li>
-          <li>Filé Mignon Grelhado com Molho de Vinho Tinto - R$32,00</li>
-          <li>Risoto de Cogumelos - R$28,00</li>
-          <li>Salmão ao Molho de Limão - R$30,00</li>
-        </ul>
-
-        <strong>
-          <p>Sobremesas:</p>
-        </strong>
-        <ul>
-          <li>Cheesecake de Morango - R$10,00</li>
-          <li>Mousse de Chocolate - R$8,00</li>
-          <li>Sorvete de Baunilha com Calda de Caramelo - R$9,00</li>
-        </ul>
-
-        <strong>
-          <p>Bebidas:</p>
-        </strong>
-        <ul>
-          <li>Vinho Tinto (Taça) - R$15,00</li>
-          <li>Refrigerantes Variados - R$5,00</li>
-          <li>Água Mineral - R$3,00</li>
-        </ul>
-      </div>
-      <div class="col-md-3">
-        <ul>
-          <li>
-            <label> Mesa para 1 pessoa : </label>
-            <input type="radio" name="mesa1" value="m1" id="m1">
+  <nav class="navbar navbar-expand-md bg-body-tertiary py-3 box-shadow">
+    <div class="container-lg">
+      <a class="navbar-brand" href="#">
+        <img src="img/G-Gourmetlog.svg" alt="" width="50" height="50" class="d-inline-block align-flex">
+        GourmetLOG
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-md-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Cadastre seu Restaurante</a>
           </li>
-          <li>
-            <label> Mesa para 1 pessoa : </label>
-            <input type="radio" name="mesa1" value="m1" id="m1">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="faq.html">Perguntas Frequentes</a>
           </li>
-          <li>
-            <label> Mesa para 1 pessoa : </label>
-            <input type="radio" name="mesa1" value="m1" id="m1">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Encontre Reservas</a>
           </li>
-        </ul>
+          <li class="nav-item">
+            <a class="btn btn-outline-danger ml-md-2" aria-current="page" href="#">Login</a>
+          </li>
       </div>
+  </nav>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-4">
+            <!-- Informações do Usuário -->
+            <div class="card">
+                <img src="https://via.placeholder.com/150" class="card-img-top" alt="Imagem de Perfil">
+                <div class="card-body">
+                    <h5 class="card-title">Nome do Usuário</h5>
+                    <p class="card-text">E-mail: usuario@email.com</p>
+                    <p class="card-text">Telefone: (15) 456-7890</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-8">
+            <!-- Reservas do Usuário -->
+            <div class="card">
+                <div class="card-header font-weight-bold">
+                    Suas Reservas
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Reserva 1 - Data: 01/01/2023
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-custom">Avaliar</button>
+                        <button type="button" class="btn btn-custom">Editar</button>
+                        <button type="button" class="btn btn-custom">Cancelar</button>
+                    </div>
+                </li>
+                
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                      Reserva 2 - Data: 02/01/2023
+                      <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-custom">Avaliar</button>
+                        <button type="button" class="btn btn-custom">Editar</button>
+                        <button type="button" class="btn btn-custom">Cancelar</button>
+                    </div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                      Reserva 3 - Data: 03/01/2023
+                      <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-custom">Avaliar</button>
+                        <button type="button" class="btn btn-custom">Editar</button>
+                        <button type="button" class="btn btn-custom">Cancelar</button>
+                    </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="card mt-3">
+              <div class="card-header font-weight-bold">
+                  Minhas Avaliações
+              </div>
+              <ul class="list-group list-group-flush">
+                  <!-- Lista de avaliações aqui ... -->
+              </ul>
+
+              <!-- Sugestões com Carrossel de Restaurantes -->
+              <div class="card mt-3">
+                <div class="card-header font-weight-bold">
+                    Sugestões com Carrossel de Restaurantes
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <!-- Primeiro Carrossel -->
+                        <div class="col-md-6">
+                            <div id="carouselExampleControls1" class="carousel slide" data-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="https://via.placeholder.com/800x400" class="d-block w-100" alt="Restaurante 1">
+                                        <div class="carousel-caption d-none d-md-block">
+                                            <h5>Restaurante 1</h5>
+                                            <p>Descrição do Restaurante 1.</p>
+                                        </div>
+                                    </div>
+                                    <!-- Adicione mais itens ao primeiro carrossel conforme necessário -->
+                                </div>
+                                <a class="carousel-control-prev" href="#carouselExampleControls1" role="button" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Anterior</span>
+                                </a>
+                                <a class="carousel-control-next" href="#carouselExampleControls1" role="button" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Próximo</span>
+                                </a>
+                            </div>
+                        </div>
+            
+                        <!-- Segundo Carrossel -->
+                        <div class="col-md-6">
+                            <div id="carouselExampleControls2" class="carousel slide" data-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="https://via.placeholder.com/800x400" class="d-block w-100" alt="Restaurante 2">
+                                        <div class="carousel-caption d-none d-md-block">
+                                            <h5>Restaurante 2</h5>
+                                            <p>Descrição do Restaurante 2.</p>
+                                        </div>
+                                    </div>
+                                    <!-- Adicione mais itens ao segundo carrossel conforme necessário -->
+                                </div>
+                                <a class="carousel-control-prev" href="#carouselExampleControls2" role="button" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Anterior</span>
+                                </a>
+                                <a class="carousel-control-next" href="#carouselExampleControls2" role="button" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Próximo</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+              
+            </div>
+        </div>
     </div>
-  </div>
+</div>
+<!-- Minhas Avaliações -->
 
 
 
-
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-    crossorigin="anonymous"></script>
 </body>
-
 </html>
