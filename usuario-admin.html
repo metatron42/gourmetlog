@@ -1,388 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GourmetLOG</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Perfil do Usuário</title>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/style.css">
-
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
+  <nav class="navbar navbar-expand-md bg-body-tertiary py-3 box-shadow">
+    <div class="container-lg">
+      <a class="navbar-brand" href="#">
+        <img src="img/G-Gourmetlog.svg" alt="" width="50" height="50" class="d-inline-block align-flex">
+        GourmetLOG
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-md-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Cadastre seu Restaurante</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="faq.html">Perguntas Frequentes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Encontre Reservas</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-outline-danger ml-md-2" aria-current="page" href="#">Login</a>
+          </li>
+      </div>
+  </nav>
 
-    <!-- Modal Login-->
-
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel"></h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-4">
+            <!-- Informações do Usuário -->
+            <div class="card">
+                <img src="https://via.placeholder.com/150" class="card-img-top" alt="Imagem de Perfil">
+                <div class="card-body">
+                    <h5 class="card-title">Nome do Usuário</h5>
+                    <p class="card-text">E-mail: usuario@email.com</p>
+                    <p class="card-text">Telefone: (15) 456-7890</p>
                 </div>
-                <div class="modal-body">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-md-6 right-mark">
-                                <div class="login-container">
-                                    <h6>Login</h6>
-                                    <form class="login-form" onsubmit="return validateForm()">
-                                        <div class="mb-3">
-                                            <label for="username" class="form-label">Usuário:</label>
-                                            <input type="text" id="username" name="username" class="form-control"
-                                                required>
+            </div>
+        </div>
+
+        <div class="col-md-8">
+            <!-- Reservas do Usuário -->
+            <div class="card">
+                <div class="card-header font-weight-bold">
+                    Suas Reservas
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Reserva 1 - Data: 01/01/2023
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-custom">Avaliar</button>
+                        <button type="button" class="btn btn-custom">Editar</button>
+                        <button type="button" class="btn btn-custom">Cancelar</button>
+                    </div>
+                </li>
+                
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                      Reserva 2 - Data: 02/01/2023
+                      <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-custom">Avaliar</button>
+                        <button type="button" class="btn btn-custom">Editar</button>
+                        <button type="button" class="btn btn-custom">Cancelar</button>
+                    </div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                      Reserva 3 - Data: 03/01/2023
+                      <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-custom">Avaliar</button>
+                        <button type="button" class="btn btn-custom">Editar</button>
+                        <button type="button" class="btn btn-custom">Cancelar</button>
+                    </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="card mt-3">
+              <div class="card-header font-weight-bold">
+                  Minhas Avaliações
+              </div>
+              <ul class="list-group list-group-flush">
+                  <!-- Lista de avaliações aqui ... -->
+              </ul>
+
+              <!-- Sugestões com Carrossel de Restaurantes -->
+              <div class="card mt-3">
+                <div class="card-header font-weight-bold">
+                    Sugestões com Carrossel de Restaurantes
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <!-- Primeiro Carrossel -->
+                        <div class="col-md-6">
+                            <div id="carouselExampleControls1" class="carousel slide" data-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="https://via.placeholder.com/800x400" class="d-block w-100" alt="Restaurante 1">
+                                        <div class="carousel-caption d-none d-md-block">
+                                            <h5>Restaurante 1</h5>
+                                            <p>Descrição do Restaurante 1.</p>
                                         </div>
-                                        <div class="form-group" style="position: relative;">
-                                            <label for="password" class="form-label">Senha:</label>
-
-                                            <input type="password" id="password" name="password" class="form-control"
-                                                required>
-
-                                            <span class="password-toggle" id="password-toggle">
-
-                                                <svg xmlns="icons/eye" width="20" height="20" fill="currentColor"
-                                                    class="bi bi-eye-slash" viewBox="0 0 16 16">
-                                                    <path fill-rule="evenodd"
-                                                        d="M1.646 1.646a.5.5 0 0 1 .708 0l12 12a.5.5 0 0 1-.708.708l-12-12a.5.5 0 0 1 0-.708z" />
-                                                    <path fill-rule="evenodd"
-                                                        d="M1.146 7.646a7.5 7.5 0 0 1 10.51 0 .5.5 0 0 0 .708 0 8.5 8.5 0 0 0-11.916 0 .5.5 0 0 0 .708 0z" />
-                                                    <path fill-rule="evenodd"
-                                                        d="M8 4a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm-1 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
-                                                </svg>
-
-                                            </span>
-
-                                        </div>
-                                        <div class="d-grid gap-2">
-                                            <button type="submit" class="btn btn-danger btn-box"
-                                                id="login-button">Entrar</button>
-                                        </div>
-                                    </form>
-                                    <div class="options">
-                                        <div class="option">
-
-                                            <a href="formularioSenha.html">Esqueci minha senha</a>
-                                        </div>
-
-
                                     </div>
+                                    <!-- Adicione mais itens ao primeiro carrossel conforme necessário -->
                                 </div>
-
-
+                                <a class="carousel-control-prev" href="#carouselExampleControls1" role="button" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Anterior</span>
+                                </a>
+                                <a class="carousel-control-next" href="#carouselExampleControls1" role="button" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Próximo</span>
+                                </a>
                             </div>
-
-
-                            <div class="col-md-6">
-                                <h6>Ainda não tem conta?</h6>
-                                <form id="formulario">
-                                    <div class="mb-3">
-                                        <label for="nome" class="form-label">Nome</label>
-                                        <input type="text" class="form-control" id="nome" placeholder="Digite seu nome"
-                                            required>
-                                    </div>
-
-                                    <div class="mb-3">
-                                        <label for="cpf" class="form-label">CPF</label>
-                                        <input type="text" class="form-control" id="cpf" placeholder="Digite seu CPF"
-                                            required>
-                                        <div id="cpf-counter" class="text-muted">0/11</div>
-                                        <div id="cpf-error" class="text-danger"></div>
-                                    </div>
-
-                                    <div class="mb-3">
-                                        <label for="dataNascimento" class="form-label">Data de Nascimento</label>
-                                        <input type="date" class="form-control" id="dataNascimento" required>
-                                    </div>
-
-                                    <div class="mb-3">
-                                        <label for="email" class="form-label">E-mail</label>
-                                        <input type="email" class="form-control" id="email"
-                                            placeholder="Digite seu E-mail" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="confirmarEmail" class="form-label">Confirme seu E-mail</label>
-                                        <input type="email" class="form-control" id="confirmarEmail"
-                                            placeholder="Confirme seu E-mail" required>
-                                    </div>
-
-                                    <div class="mb-3">
-                                        <label for="senha" class="form-label">Senha</label>
-                                        <input type="password" class="form-control" id="senha"
-                                            placeholder="Digite sua senha (mínimo de 8 caracteres)" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="confirmarSenha" class="form-label">Confirme a Senha</label>
-                                        <input type="password" class="form-control" id="confirmarSenha"
-                                            placeholder="Confirme sua senha" required>
-                                        <small id="senhaHelp" class="form-text text-muted">A senha deve conter no mínimo
-                                            8
-                                            caracteres.</small>
-                                    </div>
-                                    <div class="d-grid gap-2">
-                                        <button type="submit" class="btn btn-danger btn-box">Cadastrar</button>
-                                        <div class="alert alert-success alert-cadastro" role="alert">
-                                            Cadastro concluído!
+                        </div>
+            
+                        <!-- Segundo Carrossel -->
+                        <div class="col-md-6">
+                            <div id="carouselExampleControls2" class="carousel slide" data-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="https://via.placeholder.com/800x400" class="d-block w-100" alt="Restaurante 2">
+                                        <div class="carousel-caption d-none d-md-block">
+                                            <h5>Restaurante 2</h5>
+                                            <p>Descrição do Restaurante 2.</p>
                                         </div>
                                     </div>
-                                </form>
-
+                                    <!-- Adicione mais itens ao segundo carrossel conforme necessário -->
+                                </div>
+                                <a class="carousel-control-prev" href="#carouselExampleControls2" role="button" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Anterior</span>
+                                </a>
+                                <a class="carousel-control-next" href="#carouselExampleControls2" role="button" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Próximo</span>
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+              
+            </div>
         </div>
     </div>
-    </div>
-    <!-- Fim Modal Login-->
-
-
-    <!-- Header-->
-    <nav class="navbar navbar-expand-md bg-body-tertiary py-3 box-shadow">
-        <div class="container-lg">
-            <a class="navbar-brand" href="#">
-                <img src="img/G-Gourmetlog.svg" alt="" width="50" height="50" class="d-inline-block align-flex">
-                GourmetLOG
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-lg-auto">
-                    <li class="nav-item px-1">
-                        <a class="nav-link active" aria-current="page" href="restaurante-cadastro.html">Cadastre seu Restaurante</a>
-                    </li>
-                    <li class="nav-item px-1">
-                        <a class="nav-link active" aria-current="page" href="faq.html">Perguntas Frequentes</a>
-                    </li>
-                    <li class="nav-item px-1">
-                        <a class="nav-link active" aria-current="page" href="feed.html">Faça Reservas</a>
-                    </li>
-                    <li class="nav-item px-3">
-                        <a class="btn btn-outline-danger ml-md-2" aria-current="page" data-bs-toggle="modal" data-bs-target="#exampleModal">Login</a>
-                    </li>
-            </div>
-    </nav>
-    <!-- Fim Header-->
-
-    <!--Headline-->
-
-    <section class="bg-light text-center">
-        <div class="container-lg">
-            <div class="py-5">
-                <span class="h6 d-block">VIVA MOMENTOS ÚNICOS</span>
-                <h2 class="display-4 text-danger">Economize e aproveite</h2>
-            </div>
-
-            <div class="row">
-                <div class="col-lg-3 col-md-6">
-                    <div class="d-flex py-3 justify-content-center">
-                        <img id="headline-index" src="icons/calendar-check.svg" alt="" height="150">
-                    </div>
-                    <h3>Reserve</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis inventore voluptas tempore
-                        fuga ullam iste commodi voluptatibus corrupti incidunt illo.</p>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <div class="d-flex p-3 justify-content-center">
-                        <img id="headline-index" src="icons/piggy-bank.svg" alt="" height="150">
-                    </div>
-                    <h3>Economize</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis inventore voluptas tempore
-                        fuga ullam iste commodi voluptatibus corrupti incidunt illo.</p>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <div class="d-flex py-3 justify-content-center">
-                        <img id="headline-index" src="icons/emoji-heart-eyes.svg" alt="" height="150">
-                    </div>
-                    <h3>Aproveite</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis inventore voluptas tempore
-                        fuga ullam iste commodi voluptatibus corrupti incidunt illo.</p>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <div class="d-flex py-3 justify-content-center">
-                        <img id="headline-index" src="icons/repeat.svg" alt="" height="150">
-                    </div>
-                    <h3>Repita</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis inventore voluptas tempore
-                        fuga ullam iste commodi voluptatibus corrupti incidunt illo.</p>
-                </div>
-
-            </div>
-
-            <a href="pesquisa.html" class="btn btn-danger btn-lg my-5">Encontrar Reserva</a>
-
-
-        </div>
-
-    </section>
-
-    <!--Fim Headline-->
-
-    <!--Footer-->
-
-    <footer class="bg-dark text-white">
-        <div class="container py-5">
-            <div class="row">
-                <div class="col justify-content-center">
-                    <ul class="list-unstyled">
-                        <li>
-                            <a class="nav-link active" href="contato.html">Fale Conosco</a>
-                        </li>
-                        <li>
-                            <a class="nav-link active" href="restaurante-cadastro.html">Cadastre seu Restaurante</a>
-                        </li>
-                        <li>
-                            <a class="nav-link active" href="faq.html">Políticas de Privacidade e Termos de Uso</a>
-                        </li>
-
-                    </ul>
-                </div>
-            </div>
-
-        </div>
-
-    </footer>
-
-    <!--Fim Footer-->
-
-    
-
-    <!--Script Login-->
-
-    <script>
-        const passwordInput = document.getElementById("password");
-        const passwordToggle = document.getElementById("password-toggle");
-
-        passwordToggle.addEventListener("click", function () {
-            if (passwordInput.type === "password") {
-                passwordInput.type = "text";
-                passwordToggle.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M7.978.293a1 1 0 0 1 .044 1.414l-3.5 3.5a1 1 0 0 1-1.32.083l-.094-.083a1 1 0 0 1-.083-1.32l3.5-3.5a1 1 0 0 1 1.497 0zM8 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8z"/><path fill-rule="evenodd" d="M9.293 7.978a1 1 0 0 1 1.414.044l3.5 3.5a1 1 0 0 1-1.32 1.497l-.094-.083a1 1 0 0 1-.083-1.32l-3.5-3.5a1 1 0 0 1 0-1.414z"/><path d="M7.646 8.854a.5.5 0 0 1 .708 0L8 9.207l.646-.646a.5.5 0 1 1 .708.708L8.707 10l.647.646a.5.5 0 0 1-.708.708L8 10.707l-.646.647a.5.5 0 0 1-.708-.708L7.293 10l-.647-.646a.5.5 0 0 1 0-.708z"/></svg>';
-            } else {
-                passwordInput.type = "password";
-                passwordToggle.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-eye-slash" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 1.646a.5.5 0 0 1 .708 0l12 12a.5.5 0 0 1-.708.708l-12-12a.5.5 0 0 1 0-.708z"/><path fill-rule="evenodd" d="M1.146 7.646a7.5 7.5 0 0 1 10.51 0 .5.5 0 0 0 .708 0 8.5 8.5 0 0 0-11.916 0 .5.5 0 0 0 .708 0z"/><path fill-rule="evenodd" d="M8 4a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm-1 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/></svg>';
-            }
-        });
-
-        function validateForm() {
-            const username = document.getElementById("username").value;
-            const password = document.getElementById("password").value;
-
-            if (!username || !password) {
-                alert("Por favor, preencha todos os campos.");
-                return false;
-            }
-
-            if (password.length < 8) {
-                alert("A senha deve conter no mínimo 8 caracteres.");
-                return false;
-            }
-
-            if (username.indexOf("@") === -1) {
-                alert("Endereço de e-mail do usuário está incompleto.");
-                return false;
-            }
-
-            return true;
-        }
-    </script>
-
-    <!--Script Cadastro-->
-
-    <script>
-        document.getElementById('formulario').addEventListener('submit', function (e) {
-            e.preventDefault();
-            if (validarFormulario()) {
-                exibirMensagemCadastroConcluido();
-            }
-        });
-
-        document.getElementById('cpf').addEventListener('input', function () {
-            const cpfInput = this;
-            const cpfCounter = document.getElementById('cpf-counter');
-            const cpfError = document.getElementById('cpf-error');
-            const cpfValue = cpfInput.value;
-            const cpfLength = cpfValue.length;
-
-            const cpfRegex = /^\d{11}$/;
-
-            if (cpfRegex.test(cpfValue)) {
-                cpfCounter.textContent = cpfLength + '/11';
-                cpfError.textContent = '';
-            } else {
-                cpfCounter.textContent = cpfLength + '/11';
-                cpfError.textContent = 'CPF inválido! Digite novamente.';
-            }
-        });
-
-        document.getElementById('confirmarEmail').addEventListener('input', function () {
-            const emailInput = document.getElementById('email');
-            const confirmarEmailInput = this;
-            const emailError = document.getElementById('email-error');
-            const emailValue = emailInput.value;
-            const confirmarEmailValue = confirmarEmailInput.value;
-
-            if (emailValue !== confirmarEmailValue) {
-                emailError.textContent = 'Os emails não coincidem.';
-            } else {
-                emailError.textContent = '';
-            }
-        });
-
-        function validarFormulario() {
-            const nome = document.getElementById('nome').value;
-            const cpf = document.getElementById('cpf').value;
-            const dataNascimento = document.getElementById('dataNascimento').value;
-            const email = document.getElementById('email').value;
-            const senha = document.getElementById('senha').value;
-            const confirmarSenha = document.getElementById('confirmarSenha').value;
-
-            if (!nome || !cpf || !dataNascimento || !email || !senha || !confirmarSenha) {
-                alert('Todos os campos são obrigatórios.');
-                return false;
-            }
-
-            if (senha.length <script 8) {
-                alert('A senha deve conter no mínimo 8 caracteres.');
-                return false;
-            }
-
-            if (senha !== confirmarSenha) {
-                alert('As senhas não coincidem.');
-                return false;
-            }
-
-            if (email !== confirmarEmail) {
-                alert('Os emails não coincidem.');
-                return false;
-            }
-
-            return true;
-        }
-
-        function exibirMensagemCadastroConcluido() {
-            const alertCadastro = document.querySelector('.alert-cadastro');
-            alertCadastro.style.display = 'block';
-        }
-
-        const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
-
-        </script>
-
-   
+</div>
+<!-- Minhas Avaliações -->
 
 
 
-    <script type="text/javascript" src="js/bootstrap.js"></script>
-    <script type="text/javascript" src="js/script.js"></script>
 </body>
-
 </html>
