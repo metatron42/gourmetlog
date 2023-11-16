@@ -116,5 +116,3 @@ function validarFormulario() {
     return true;
 }
 
-
-
