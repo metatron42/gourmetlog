@@ -77,14 +77,16 @@
 
                         </div>
                         <div class="d-grid gap-2">
-                            <button type="submit" class="btn btn-danger btn-box" id="login-button">Entrar</button>
+                            <a type="submit" class="btn btn-danger btn-box mt-3" id="login-button" href="feed usuario.html">Entrar</a>
                         </div>
+
+                        
                     </form>
                     <div class="options">
-                        <div class="option">
+                        <div class="d-grid gap-2">
 
-                            <a class="btn btn-outline-danger ml-md-2" aria-current="page" data-bs-toggle="modal"
-                                data-bs-target="#exampleModal">Esqueci minha senha</a>
+                            <button class="btn btn-outline-danger btn-box mt-3" aria-current="page" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">Esqueci minha senha</button>
                         </div>
 
 
@@ -139,12 +141,14 @@
                             caracteres.</small>
                     </div>
                     <div class="d-grid gap-2">
-                        <button type="submit" class="btn btn-danger btn-box">Cadastrar</button>
-                        <div class="alert alert-success alert-cadastro" role="alert">
+                        <button type="submit" class="btn btn-danger btn-box" onclick="submitForm()">Cadastrar</button>
+                        <div class="alert alert-success alert-cadastro alert-dismissible" role="alert"
+                            style="display:none;">
                             Cadastro concluído!
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                         </div>
                     </div>
-                </form>
+
 
             </div>
         </div>
@@ -165,14 +169,16 @@
                     <div class="container-fluid">
                         <h2 class="text-center">Redefinir Senha</h2>
                         <p class="text-center">Para recuperar seu acesso, nos informe o e-mail cadastrado</p>
-                        <form action="enviar_email.php" method="post" onsubmit="return validateForm()">
+                        <form action="" method="post" onsubmit="return validateForm()">
                             <div class="form-group">
                                 <div class="input-group">
-                                    <span class="input-group-addon">E-mail:</span>
+                                    <div class="text text-center">
+                                        <span class="input-group-addon">E-mail:</span>
+                                    </div>
                                     <input type="email" id="email" name="email" class="form-control" required>
                                 </div>
+                                <button type="submit" class="btn btn-danger btn-block mt-3">Enviar E-mail</button>
                             </div>
-                            <button type="submit" class="btn btn-danger btn-block">Enviar E-mail</button>
                         </form>
                     </div>
                 </div>
@@ -182,7 +188,7 @@
         <!--Script Modal-->
 
         <script>
-            function validateForm() {
+            function validateForm1() {
                 const emailInput = document.getElementById("email");
                 const emailValue = emailInput.value;
 
@@ -199,7 +205,7 @@
 
 
     <script>
-        function validateForm() {
+        function validateForm1() {
             const emailInput = document.getElementById("email");
             const emailValue = emailInput.value;
 

@@ -1,3 +1,6 @@
+
+
+
 /* Script Login*/
 
 const passwordInput = document.getElementById("password");
@@ -46,45 +49,6 @@ document.getElementById('formulario').addEventListener('submit', function (e) {
     }
 });
 
-document.getElementById('cpf').addEventListener('input', function () {
-    const cpfInput = this;
-    const cpfCounter = document.getElementById('cpf-counter');
-    const cpfError = document.getElementById('cpf-error');
-    const cpfValue = cpfInput.value;
-    const cpfLength = cpfValue.length;
-
-    const cpfRegex = /^\d{11}$/;
-
-    if (cpfRegex.test(cpfValue)) {
-        cpfCounter.textContent = cpfLength + '/11';
-        cpfError.textContent = '';
-    } else {
-        cpfCounter.textContent = cpfLength + '/11';
-        cpfError.textContent = 'CPF inválido! Digite novamente.';
-    }
-});
-
-document.getElementById('confirmarEmail').addEventListener('input', function () {
-    const emailInput = document.getElementById('email');
-    const confirmarEmailInput = this;
-    const emailError = document.getElementById('email-error');
-    const emailValue = emailInput.value;
-    const confirmarEmailValue = confirmarEmailInput.value;
-
-    if (emailValue !== confirmarEmailValue) {
-        emailError.textContent = 'Os emails não coincidem.';
-    } else {
-        emailError.textContent = '';
-    }
-});
-
-function exibirMensagemCadastroConcluido() {
-    const alertCadastro = document.querySelector('.alert-cadastro');
-    alertCadastro.style.display = 'block';
-}
-
-const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
-
 function validarFormulario() {
     const nome = document.getElementById('nome').value;
     const cpf = document.getElementById('cpf').value;
@@ -92,8 +56,9 @@ function validarFormulario() {
     const email = document.getElementById('email').value;
     const senha = document.getElementById('senha').value;
     const confirmarSenha = document.getElementById('confirmarSenha').value;
+    const confirmarEmail = document.getElementById('confirmarEmail').value; // Add this line
 
-    if (!nome || !cpf || !dataNascimento || !email || !senha || !confirmarSenha) {
+    if (!nome || !cpf || !dataNascimento || !email || !senha || !confirmarSenha || !confirmarEmail) {
         alert('Todos os campos são obrigatórios.');
         return false;
     }
@@ -116,3 +81,15 @@ function validarFormulario() {
     return true;
 }
 
+/**Botão Cadastrar */ 
+
+function submitForm() {
+    if (validarFormulario()) {
+        exibirMensagemCadastroConcluido();
+    }
+}
+
+function exibirMensagemCadastroConcluido() {
+    const alertCadastro = document.querySelector('.alert-cadastro');
+    alertCadastro.style.display = 'block';
+}
