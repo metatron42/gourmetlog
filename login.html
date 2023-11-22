@@ -157,7 +157,6 @@
     <!--Fim Conteudo-->
 
     <!--Modal Recuperar Senha-->
-
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
@@ -169,40 +168,38 @@
                     <div class="container-fluid">
                         <h2 class="text-center">Redefinir Senha</h2>
                         <p class="text-center">Para recuperar seu acesso, nos informe o e-mail cadastrado</p>
-                        <form action="" method="post" onsubmit="return validateForm()">
+                        <div>
                             <div class="form-group">
-                                <div class="input-group">
+                                <div class="d-flex align-items-center input-group">
                                     <div class="text text-center">
-                                        <span class="input-group-addon">E-mail:</span>
+                                        <span class="mr-3 input-group-addon">E-mail:</span>
                                     </div>
-                                    <input type="email" id="email" name="email" class="form-control" required>
+                                    <input type="email" id="forget-email" name="email" class="form-control">
                                 </div>
-                                <button type="submit" class="btn btn-danger btn-block mt-3">Enviar E-mail</button>
+                                <button class="btn btn-danger btn-block mt-3" onclick="showResetPasswordFeedback()">
+                                    Enviar E-mail
+                                </button>
                             </div>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
         <!--Script Modal-->
-
         <script>
-            function validateForm1() {
-                const emailInput = document.getElementById("email");
-                const emailValue = emailInput.value;
+            function showResetPasswordFeedback() {
+                const emailInput = document.getElementById('forget-email');
 
-                if (emailValue.indexOf("@") === -1) {
-                    alert("Endereço de e-mail do usuário está incompleto.");
-                    return false;
+                if (emailInput.value === '') {
+                    alert('Preencha o e-mail');
+                    return;
                 }
 
-                return true;
+                alert('Senha redefinida com sucesso');
             }
         </script>
     </div>
-
-
 
     <script>
         function validateForm1() {
